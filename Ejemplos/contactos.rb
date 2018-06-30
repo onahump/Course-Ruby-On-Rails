@@ -48,10 +48,17 @@ p valores_de_la_lista_de_contactos
 # Buscar una llave en especifico 
 p"*"*100
 
-p contactos.has_key?(:aldo)
+p contactos.has_key?(:nahum)
+
+# Buscar una valor en especifico 
+p"*"*100
+
+p contactos.has_value?(11156785)
 
 # Agregar un contacto 
 p"*"*100
 contactos.store(:perengano, 67895465)
 
 p contactos
+
+
