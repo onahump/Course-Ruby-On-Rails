@@ -1,6 +1,7 @@
 class Perro
-	attr_reader :raza, :color, :edad  #Permite los getter & setters
-	attr_writer :color
+	attr_reader :raza, :color, :edad  #Permite leer los atributos 
+	attr_writer :color  #Permite escribir sobre la variable 
+	
 	def initialize(raza, color , edad)
 		@raza = raza
 		@color = color
