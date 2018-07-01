@@ -6,16 +6,13 @@ class Perro
 		@color = color
 		@edad = edad
 	end	
+
+	def ladrar(ladrido)
+		puts "#{ladrido} #{ladrido} #{ladrido}"
+	end
+
+	def descripcion
+		puts "Soy de raza #{@raza}, de color #{@color} y tengo #{@edad}"
+	end
+
 end
-
-perro = Perro.new("Pastor Aleman","cafe","5 años")
-
-puts perro.raza
-puts perro.color
-puts perro.edad
-
-puts perro.inspect
-
-perro.raza = "Maltes"
-
-puts perro.inspect
