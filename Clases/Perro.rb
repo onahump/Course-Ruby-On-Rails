@@ -1,14 +1,10 @@
 class Perro
-	attr_reader :raza  #Permite los getter & setters
+	attr_reader :raza, :color  #Permite los getter & setters
 
 	def initialize(raza, color , edad)
 		@raza = raza
 		@color = color
 		@edad = edad
-	end
-
-	def color
-		@color 
 	end
 
 	def edad
