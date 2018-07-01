@@ -6,6 +6,11 @@ class Perro
 		@color = color
 		@edad = edad
 	end	
+
+	def color=(nuevo_color)
+		@color = nuevo_color
+	end
+
 end
 
 perro = Perro.new("Pastor Aleman","cafe","5 años")
