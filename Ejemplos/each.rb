@@ -35,3 +35,7 @@ end
 "Nahum".each_char do |char|
 	puts char
 end
+
+10.times do |time|
+	puts "Hola papus #{time}"
+end
