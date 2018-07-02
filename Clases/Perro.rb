@@ -11,8 +11,8 @@ class Perro
 		puts "#{ladrido} #{ladrido} #{ladrido}"
 	end
 
-	def descripcion
-		puts "Soy de raza #{@raza}, de color #{@color} y tengo #{@edad}"
+	def to_s
+		"Soy de raza #{@raza}, de color #{@color} y tengo #{@edad}"
 	end
 
 end
