@@ -19,6 +19,7 @@ class List
 
 	def checked_item(index)
 		@items[index].checked = true 
+		@items[index]
 	end
 
 	def remove_all
