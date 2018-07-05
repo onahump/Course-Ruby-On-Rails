@@ -21,6 +21,7 @@ class ListApp
 	def run 
 		puts "Bienvenido a nuestra lista de compras"
 		loop do 
+			puts 
 			puts "a - Agregar un articulo" 
 			puts "r - Remover un articulo" 
 			puts "v - Mostrar todos los articulos" 
@@ -37,7 +38,9 @@ class ListApp
 				print "Introduce un producto: "
 				item = gets.chomp
 				@list.add_item(item)
-				puts "Agregaste #{item} a la lista de compras"
+				40.times{ print "-"}
+				puts "\nAgregaste #{item} a la lista de compras"
+				40.times{ print "-"}
 			when "v"
 				@list.show_all
 			when "r"
@@ -45,7 +48,9 @@ class ListApp
 				item = gets.chomp
 				item = item.to_i
 				@list.remove_item(item)
-				puts "Has removido el articulo #{item} de la lista exitosamente"
+				40.times{ print "-"}
+				puts "\nHas removido el articulo #{item} de la lista exitosamente"
+				40.times{ print "-"}
 			when "m"
 				print "¿Que numero de articulo desea marcar?: "
 				item = gets.chomp
@@ -60,6 +65,8 @@ class ListApp
 				else
 					puts "No se elimino ningun articulo"
 				end
+			else 
+				puts "Operacion no reconocida"
 			end
 
 		end
