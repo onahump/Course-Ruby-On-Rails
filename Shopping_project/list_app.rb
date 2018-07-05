@@ -56,6 +56,7 @@ class ListApp
 				answer = gets.chomp
 				if answer == "s"
 					@list.remove_all
+					puts "Se removieron exitosamente todos los articulos"
 				else
 					puts "No se elimino ningun articulo"
 				end
