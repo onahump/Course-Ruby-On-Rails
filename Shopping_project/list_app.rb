@@ -40,6 +40,25 @@ class ListApp
 				puts "Agregaste #{item} a la lista de compras"
 			when "v"
 				@list.show_all
+			when "r"
+				print "¿Que número de articulo desea remover?: "
+				item = gets.chomp
+				item = item.to_i
+				@list.remove_item(item)
+				puts "Has removido el articulo #{item} de la lista exitosamente"
+			when "m"
+				print "¿Que numero de articulo desea marcar?: "
+				item = gets.chomp
+				item = item.to_i
+				@list.checked_item(item)
+			when "b"
+				print "¿Estas seguro que deseas eliminar todos los articulos? s/n \n"
+				answer = gets.chomp
+				if answer == "s"
+					@list.remove_all
+				else
+					puts "No se elimino ningun articulo"
+				end
 			end
 
 		end
