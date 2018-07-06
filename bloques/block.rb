@@ -15,3 +15,7 @@ puts
 
 h = { "a" => 100, "b" => 200 }
 h.each_value {|value| puts value }
+
+puts
+
+z = { "a" => 100, "b" => 200 }
