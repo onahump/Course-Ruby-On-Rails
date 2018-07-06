@@ -25,3 +25,6 @@ puts z
 puts z.delete("r"){"No existe este elemento"}
 
 puts z
+
+
+"hello".each_char{ |c| print c,' '}
