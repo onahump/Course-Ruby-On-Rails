@@ -19,3 +19,9 @@ h.each_value {|value| puts value }
 puts
 
 z = { "a" => 100, "b" => 200 }
+
+puts z
+
+puts z.delete("r")
+
+puts z
