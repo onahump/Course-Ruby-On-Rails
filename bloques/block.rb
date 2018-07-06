@@ -1,9 +1,10 @@
-def hola
+def suma(num1, num2, &block)
 	puts "hola desde nuestra funcion"
-	resultado = 2 + 2
-	yield resultado #Saltar al bloque que hayamos asignado
+	resultado = num1 + num2
+	block.call resultado #Saltar al bloque que hayamos asignado
 end
 
-hola do |resultado|
+suma(5,6) do |resultado|
 	puts "El resultado de nuestra operacion es #{resultado}" #Pasamos nuesto bloqe
 end
+
