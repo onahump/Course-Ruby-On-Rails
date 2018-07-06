@@ -1,10 +1,9 @@
 def hola
-	yield
 	puts "hola desde nuestra funcion"
-	yield #Saltar al bloque que hayamos asignado
-	puts "hola desde nuestra funcion"
+	resultado = 2 + 2
+	yield resultado #Saltar al bloque que hayamos asignado
 end
 
-hola do
-	puts "Hola desde nuestro bloque" #Pasamos nuesto bloqe
+hola do |resultado|
+	puts "El resultado de nuestra operacion es #{resultado}" #Pasamos nuesto bloqe
 end
