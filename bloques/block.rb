@@ -10,3 +10,8 @@ end
 
 a = ["a", "b", "c"]
 a.each_index { |x| print x, " -- " }
+
+puts
+
+h = { "a" => 100, "b" => 200 }
+h.each_value {|value| puts value }
