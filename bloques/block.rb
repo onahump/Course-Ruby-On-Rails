@@ -8,7 +8,5 @@ def suma(num1, num2, &block)
 	end
 end
 
-suma(5,6) do |resultado|
-	puts "El resultado desplegado en el bloque es #{resultado}" #Pasamos nuesto bloqe
-end
-
+a = ["a", "b", "c"]
+a.each_index { |x| print x, " -- " }
