@@ -22,6 +22,6 @@ z = { "a" => 100, "b" => 200 }
 
 puts z
 
-puts z.delete("r")
+puts z.delete("r"){"No existe este elemento"}
 
 puts z
