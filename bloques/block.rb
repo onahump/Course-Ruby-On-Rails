@@ -1,3 +1,1 @@
-7.times do
-	puts "This is a code block"
-end
+7.times { puts "This is a code block"} #si el bloque es muy pequeño agregar se pueden usar llaves
