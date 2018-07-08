@@ -36,6 +36,13 @@ post '/create_workshop' do
 	erb :message
 end
 
+
+get '/:workshop_name' do
+	@workshop_name = params[:workshop_name]
+	@workshop_description = workshop_description(@workshop_name)
+	erb :workshop
+end
+
 delete'/:workshop_name' do
 	@workshop_name = params[:workshop_name]
 	@message = "borro"
@@ -44,10 +51,17 @@ delete'/:workshop_name' do
 	erb :message
 end
 
-get '/:workshop_name' do
+get '/:workshop_name/edit' do
 	@workshop_name = params[:workshop_name]
 	@workshop_description = workshop_description(@workshop_name)
-	erb :workshop
+	erb :edit_workshop
+end	
+
+put '/:workshop_name' do
+	@workshop_name = params[:workshop_name]
+	@workshop_description = params[:workshop_description]
+	creating_workshop_file(@workshop_name,@workshop_description)
+	redirect URI.escape("/#{@workshop_name}")
 end
 
 
