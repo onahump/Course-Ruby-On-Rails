@@ -2,13 +2,10 @@ require "sinatra"
 require "sinatra/reloader"
 
 
-get '/' do 
-	"<h1>Registro de alumnos</h1>
-	<p>Futbol</p>
-	<p>Tenis</p>"
+get '/' do
+	@valor = 2
+	@files = Dir.entries("workshops")
+	erb :home 
+
 end
 
-get '/imagenes' do
-  "<h1>Imagenes</h1>
-  	<p>mira una imagen</p>"
-end
