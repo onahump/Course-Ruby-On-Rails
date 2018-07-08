@@ -1,5 +1,5 @@
 <h1>Cursos del ciclo escolar 2018</h1>
 
-<% @files.each do |workshops| %>
-<p>	<%= workshops %> </p>
+<% @files.slice(1,2).each do |workshops_file| %>
+<a>	<%= File.basename(workshops_file,".*") %> </a><br>
 <% end %>
