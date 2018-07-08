@@ -1,0 +1,16 @@
+<h1> Editar taller de <%= @workshop_name %> </h1>
+
+<div>
+	<form action="/<%= @workshop_name %>" method="post">
+		<input type="hidden" name="_method" value="put">
+
+		<fieldset>
+			<label for="workshop_description">Descripcion del nuevo curso: </label><br>
+			<textarea type="description" rows="10" cols="40" name="workshop_description" id="workshop_description" value="<%= @workshop_description %>"><%= @workshop_description %>
+			</textarea>
+		</fieldset>
+
+
+		<input type="submit" name="edit_workshop" value="Editar Taller">
+	</form>
+</div>
