@@ -1,3 +1,10 @@
 <h1> Taller de <%= @workshop_name %> </h1>
 
 <p> <%= @workshop_description %></p>
+
+<div>
+	<form action="/<%= @workshop_name %>" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" name="deleting_workshop" value="Eliminar workshop">
+	</form>
+</div>
