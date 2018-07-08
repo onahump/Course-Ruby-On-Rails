@@ -20,11 +20,11 @@ end
 
 get '/' do
 	@files = Dir.entries("workshops")
-	erb :home 
+	erb :home, layout: :main
 end
 
 get '/create_workshop' do 
-	erb :create_workshop
+	erb :create_workshop, layout: :main
 end
 
 post '/create_workshop' do
@@ -33,14 +33,14 @@ post '/create_workshop' do
 	creating_workshop_file(@workshop_name,@workshop_description)
 	@message = "creo"
 
-	erb :message
+	erb :message, layout: :main
 end
 
 
 get '/:workshop_name' do
 	@workshop_name = params[:workshop_name]
 	@workshop_description = workshop_description(@workshop_name)
-	erb :workshop
+	erb :workshop, layout: :main
 end
 
 delete'/:workshop_name' do
@@ -48,13 +48,13 @@ delete'/:workshop_name' do
 	@message = "borro"
 	deleting_workshop_file(@workshop_name)
 
-	erb :message
+	erb :message, layout: :main
 end
 
 get '/:workshop_name/edit' do
 	@workshop_name = params[:workshop_name]
 	@workshop_description = workshop_description(@workshop_name)
-	erb :edit_workshop
+	erb :edit_workshop, layout: :main
 end	
 
 put '/:workshop_name' do
