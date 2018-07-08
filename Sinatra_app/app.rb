@@ -1,4 +1,6 @@
 require "sinatra"
+require "sinatra/reloader"
+
 
 get '/' do 
 	"<h1>Registro de alumnos</h1>
