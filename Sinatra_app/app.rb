@@ -13,6 +13,10 @@ get '/' do
 	erb :home 
 end
 
+get '/create' do 
+	erb :create_workshop
+end
+
 get '/:workshop_name' do
 	@workshop_name = params[:workshop_name]
 	@workshop_description = workshop_description(@workshop_name)
