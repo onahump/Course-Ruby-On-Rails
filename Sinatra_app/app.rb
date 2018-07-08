@@ -28,16 +28,20 @@ get '/create_workshop' do
 end
 
 post '/create_workshop' do
-	@new_workshop_name = params[:new_workshop_name]
-	@new_workshop_description = params[:new_workshop_description]
-	creating_workshop_file(@new_workshop_name,@new_workshop_description)
-	erb :sucessfully_create_workshop_message
+	@workshop_name = params[:new_workshop_name]
+	@workshop_description = params[:new_workshop_description]
+	creating_workshop_file(@workshop_name,@workshop_description)
+	@message = "creo"
+
+	erb :message
 end
 
 delete'/:workshop_name' do
 	@workshop_name = params[:workshop_name]
+	@message = "borro"
 	deleting_workshop_file(@workshop_name)
-	erb :workshop_removed
+
+	erb :message
 end
 
 get '/:workshop_name' do
