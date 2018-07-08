@@ -1,5 +1,5 @@
 <h1>Cursos del ciclo escolar 2018</h1>
 
-<% if @valor == 2 %>
-	<h3>El valor es <%= @valor %></h3> 
+<% @files.each do |workshops| %>
+<p>	<%= workshops %> </p>
 <% end %>
