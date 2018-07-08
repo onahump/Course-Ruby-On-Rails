@@ -13,6 +13,11 @@ def creating_workshop_file(workshop_name,workshop_description)
 	end
 end
 
+
+def deleting_workshop_file(workshop_name)
+	File.delete("workshops/#{workshop_name}.txt")
+end
+
 get '/' do
 	@files = Dir.entries("workshops")
 	erb :home 
@@ -29,9 +34,17 @@ post '/create_workshop' do
 	erb :sucessfully_create_workshop_message
 end
 
+delete'/:workshop_name' do
+	@workshop_name = params[:workshop_name]
+	deleting_workshop_file(@workshop_name)
+	erb :workshop_removed
+end
+
 get '/:workshop_name' do
 	@workshop_name = params[:workshop_name]
 	@workshop_description = workshop_description(@workshop_name)
 	erb :workshop
 end
+
+
 
