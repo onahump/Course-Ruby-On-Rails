@@ -3,3 +3,5 @@
 <% @files.each do |workshops_file| %>
 <a href="/<%= File.basename(workshops_file,".*") %>">	<%= File.basename(workshops_file,".*") %> </a><br>
 <% end %>
+
+<br><a href="/create_workshop">Crear nuevo curso</a>
