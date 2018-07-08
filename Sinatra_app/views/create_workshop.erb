@@ -1,1 +1,15 @@
 <h1>Nuevo Taller</h1>
+
+<form action="/create_workshop" method="post">
+	<fieldset>
+		<label for="new_workshop_name">Nombre del nuevo curso: </label><br>
+		<input type="text" name="new_workshop_name" id="new_workshop_name">
+	</fieldset>	
+	<fieldset>
+		<label for="new_workshop_description">Descripcion del nuevo curso: </label><br>
+		<textarea type="description" rows="10" cols="40" name="new_workshop_description" id="new_workshop_description"></textarea>
+	</fieldset>
+	<fieldset>
+		<input type="submit">
+	</fieldset>
+</form>
