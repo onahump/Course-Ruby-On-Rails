@@ -13,7 +13,7 @@ get '/' do
 	erb :home 
 end
 
-get '/create' do 
+get '/create_workshop' do 
 	erb :create_workshop
 end
 
