@@ -26,8 +26,7 @@ post '/create_workshop' do
 	@new_workshop_name = params[:new_workshop_name]
 	@new_workshop_description = params[:new_workshop_description]
 	creating_workshop_file(@new_workshop_name,@new_workshop_description)
-	"<h1>El curso #{@new_workshop_name} con descripcion '#{@new_workshop_description}' se creo exitosamente</h1>"
-
+	erb :sucessfully_create_workshop_message
 end
 
 get '/:workshop_name' do
